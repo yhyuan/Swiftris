@@ -1,3 +1,11 @@
+//
+//  AppDelegate.swift
+//  Swiftris
+//
+//  Created by Yinhuan Yuan on 2014-09-03.
+//  Copyright (c) 2014 Yinhuan Yuan. All rights reserved.
+//
+
 import Foundation
 import SpriteKit
 
