@@ -30,13 +30,13 @@ class Swiftris {
 
 	func beginGame() {
 		if (nextShape == nil) {
-			nextShape = Shape.random(PreviewColumn, StartingRow: PreviewRow)
+			nextShape = Shape.random(PreviewColumn, startingRow: PreviewRow)
 		}
 	}
 
 	func newShape() -> (fallingShape:Shape?, nextShape:Shape?) {
 		fallingShape = nextShape
-		nextShape = Shape.random(PreviewColumn, StartingRow: PreviewRow)
+		nextShape = Shape.random(PreviewColumn, startingRow: PreviewRow)
 		fallingShape?.moveTo(StartingColumn, row: StartingRow)
 		return (fallingShape, nextShape)
 	}

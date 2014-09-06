@@ -36,7 +36,7 @@ enum BlockColor: Int, Printable {
 	}
 
 	static func random() -> BlockColor {
-		return BlockColor.fromRaw(Int(arc4randome_uniform(NumberOfColor)))!
+		return BlockColor.fromRaw(Int(arc4random_uniform(NumberOfColors)))!
 	}
 }
 
@@ -48,7 +48,7 @@ class Block: Hashable, Printable {
 	var sprite: SKSpriteNode?
 
 	var spriteName: String {
-		return color.SpriteName
+		return color.spriteName
 	}
 
 	var hashValue: Int {
@@ -64,8 +64,7 @@ class Block: Hashable, Printable {
 		self.row = row
 		self.color = color
 	}
-
-	func ==(lhs: Block, rhs: Block) -> Bool {
-		return lhs.column == rhs.column && lhs.row == lhs.row && lhs.color.toRaw() == rhs.color.toRaw()
-	}
+}
+func == (lhs: Block, rhs: Block) -> Bool {
+    return lhs.column == rhs.column && lhs.row == lhs.row && lhs.color.toRaw() == rhs.color.toRaw()
 }

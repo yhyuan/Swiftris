@@ -33,7 +33,7 @@ class SquareShape: Shape {
 		return [
 			Orientation.Zero: [blocks[ThirdBlockIdx], blocks[FourthBlockIdx]],
 			Orientation.OneEighty: [blocks[ThirdBlockIdx], blocks[FourthBlockIdx]],
-			Orientation.Ninety: [[blocks[ThirdBlockIdx], blocks[FourthBlockIdx]],
+			Orientation.Ninety: [blocks[ThirdBlockIdx], blocks[FourthBlockIdx]],
 			Orientation.TwoSeventy: [blocks[ThirdBlockIdx], blocks[FourthBlockIdx]]
 		]
 	}

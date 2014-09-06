@@ -28,7 +28,7 @@ enum Orientation: Int, Printable {
 	}
 
 	static func random() -> Orientation {
-		return Orientation.fromRaw(Int(arc4random_uniform(NumOrientations)))
+		return Orientation.fromRaw(Int(arc4random_uniform(NumOrientations)))!
 	}
 
 	static func rotate(orientation:Orientation, clockwise: Bool) -> Orientation {
@@ -89,7 +89,7 @@ class Shape: Hashable, Printable {
 
 	init(column:Int, row:Int, color: BlockColor, orientation: Orientation) {
 		self.color = color
-		self.column =column
+		self.column = column
 		self.row = row
 		self.orientation = orientation
 		initializeBlocks()
