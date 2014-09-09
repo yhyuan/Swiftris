@@ -92,7 +92,7 @@ class Swiftris {
 	}
 
 	func settleShape() {
-		if let shape == fallingShape {
+		if let shape = fallingShape {
 			for block in shape.blocks {
 				blockArray[block.column, block.row] = block
 			}
@@ -156,7 +156,7 @@ class Swiftris {
 			for var row = removedLines[0][0].row - 1; row > 0; row-- {
 				if let block = blockArray[column, row] {
 					var newRow = row
-					while (newRow < NumRows -1 && blockArray[column, newRow + 1] == nil) {
+					while ((newRow < NumRows - 1) && (blockArray[column, newRow + 1] == nil)) {
 						newRow++
 					}
 					block.row = newRow
